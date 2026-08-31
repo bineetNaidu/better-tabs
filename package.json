@@ -1,0 +1,30 @@
+{
+  "name": "better-tabs-for-zen-browser",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A zero-runtime-dependency searchable tab command palette for Firefox, Zen, and Chromium browsers",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:firefox",
+    "build:firefox": "vite build --mode firefox",
+    "build:chrome": "vite build --mode chrome",
+    "build:all": "npm run build:firefox && npm run build:chrome",
+    "check": "tsc --noEmit",
+    "dev": "vite build --watch",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "@types/firefox-webext-browser": "^143.0.0",
+    "@types/node": "^26.4.0",
+    "oxfmt": "^0.65.0",
+    "oxlint": "^1.80.0",
+    "oxlint-tsgolint": "^7.0.2001",
+    "preact": "^10.29.8",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
+  }
+}
