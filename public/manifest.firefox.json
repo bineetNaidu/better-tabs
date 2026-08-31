@@ -3,8 +3,21 @@
   "name": "Better Tabs",
   "version": "0.1.0",
   "description": "A fast, searchable command palette for every open tab in the current window.",
+  "icons": {
+    "16": "logo.png",
+    "32": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
   "permissions": ["tabs", "sessions"],
-  "action": { "default_title": "Open TabControls" },
+  "action": {
+    "default_title": "Open TabControls",
+    "default_icon": {
+      "16": "logo.png",
+      "32": "logo.png",
+      "48": "logo.png"
+    }
+  },
   "background": { "scripts": ["background.js"] },
   "content_scripts": [
     {
