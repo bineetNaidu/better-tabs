@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Better Tabs",
+  "version": "0.1.0",
+  "description": "A fast, searchable command palette for every open tab in the current window.",
+  "permissions": ["tabs", "sessions"],
+  "action": { "default_title": "Open TabControls" },
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "commands": {
+    "open-launcher": {
+      "suggested_key": { "default": "Alt+Shift+Space", "mac": "Alt+Space" },
+      "description": "Open TabControls"
+    }
+  }
+}
