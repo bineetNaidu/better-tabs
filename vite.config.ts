@@ -12,7 +12,7 @@ function targetManifest(target: string) {
     writeBundle() {
       const out = resolve(root, 'dist', target);
       copyFileSync(
-        resolve(out, target === 'chrome' ? 'manifest.chrome.json' : 'manifest.json'),
+        resolve(out, target === 'chrome' ? 'manifest.chrome.json' : 'manifest.firefox.json'),
         resolve(out, 'manifest.json'),
       );
       unlinkSync(resolve(out, 'manifest.chrome.json'));

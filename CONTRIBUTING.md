@@ -8,7 +8,6 @@ Before opening a pull request, run:
 
 ```sh
 npm run check
-npm run check-json
 npm run build:firefox
 npm run build:chrome
 ```
